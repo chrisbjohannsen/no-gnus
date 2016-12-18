@@ -1,0 +1,25 @@
+{
+  "name": "no-gnus",
+  "version": "0.0.1",
+  "description": "A tool to help you learn about current events",
+  "main": "index .js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chrisbjohannsen/no-gnus.git"
+  },
+  "author": "Christopher B Johannsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisbjohannsen/no-gnus/issues"
+  },
+  "homepage": "https://github.com/chrisbjohannsen/no-gnus#readme",
+  "devDependencies": {
+    "aws-sdk": "^2.7.15",
+    "grunt": "^1.0.1",
+    "grunt-aws-lambda": "^0.13.0",
+    "grunt-pack": "^0.1.5"
+  }
+}
