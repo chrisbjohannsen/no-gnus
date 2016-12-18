@@ -11,9 +11,47 @@ to trigger an http api call on a remote service. I have been looking for a reaso
 * [Amazon AWS Lambda] (https://aws.amazon.com/lambda/)
 * [Amazon AWS Api Gateway] (https://aws.amazon.com/api-gateway/)
 * [Amazon AWS CloudWatch] (https://aws.amazon.com/cloudwatch)
-* [Slack Messenger] (htp://slack.com/)
+* [Slack Messenger] (http://slack.com/)
 * [nodejs 4.3] (https://nodejs.org/en/) -> latest revision supported by AWS
 * [node package manager] (https://www.npmjs.com)
 * [grunt task runner] (http://gruntjs.com)
 * [grunt-aws-lambda](https://github.com/Tim-B/grunt-aws-lambda)
 
+### Process
+
+1. Create a new project directory and execute npm init to generate a package.json
+2. Use npm install to install the following packages:
+	* aws-sdk
+	* grunt
+	* grunt-cli
+	* grunt-aws-lambda
+	* grunt-pack
+3. Add index.js and code:
+```javascript	
+use strict;
+
+console.log('Loading function');
+
+exports.handler = (event, context) => {
+	let responseCode = 200;
+    let responseBody = {
+        message: "No Gnus is good gnus with Gary Gnu",
+        input: event
+    };
+
+    let response = {
+        statusCode: responseCode,
+        headers: {},
+        body: JSON.stringify(responseBody)
+    };
+    
+    console.log("response : " + JSON.stringify(response));
+    context.succeed(response);
+};	
+```
+
+4. Save and test using `grunt lambda_invoke`
+5. Login to the AWS Console and setup a Lambda function. Make note of the arn of the function you create as you will need to add it to your grunt lambda_deploy task.
+6. Setup AWS credentials https://github.com/Tim-B/grunt-aws-lambda#aws-credentials
+7. Add configuration to the grunt lambda_deploy task:
+	* 
