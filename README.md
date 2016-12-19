@@ -52,7 +52,7 @@ exports.handler = (event, context) => {
 };
 ```
 * Save and test using `grunt lambda_invoke`
-* Login to the AWS Console and setup a Lambda function. Make note of the arn of the function you create as you will need to add it to your grunt lambda_deploy task.
+* Login to the AWS Console and create a new Lambda function. Make note of the arn of the function you create as you will need to add it to your grunt lambda_deploy task.
 * Setup AWS credentials 
 	* https://github.com/Tim-B/grunt-aws-lambda#aws-credentials
 	* http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials.html
@@ -67,3 +67,7 @@ exports.handler = (event, context) => {
 		}
     }
 ```
+* Create an AWS Api Gateway service to serve up your Lambda code
+    * https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-create-api-as-simple-proxy-for-lambda.html
+* Deploy your lambda using `grunt deploy`
+* Log into Slack and navigate to Manage > Custom Integrations and create your slash command using the Api Gateway url as the target.
