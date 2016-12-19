@@ -28,7 +28,7 @@ to trigger an http api call on a remote service. I have been looking for a reaso
 	* grunt-pack
 3. Add index.js and code:
 ```javascript
-use strict;
+'use strict';
 
 console.log('Loading function');
 
