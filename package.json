@@ -21,5 +21,8 @@
     "grunt": "^1.0.1",
     "grunt-aws-lambda": "^0.13.0",
     "grunt-pack": "^0.1.5"
+  },
+  "dependencies": {
+    "lodash": "^4.17.2"
   }
 }
