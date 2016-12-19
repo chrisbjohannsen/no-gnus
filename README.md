@@ -52,6 +52,8 @@ exports.handler = (event, context) => {
 
 4. Save and test using `grunt lambda_invoke`
 5. Login to the AWS Console and setup a Lambda function. Make note of the arn of the function you create as you will need to add it to your grunt lambda_deploy task.
-6. Setup AWS credentials https://github.com/Tim-B/grunt-aws-lambda#aws-credentials
+6. Setup AWS credentials 
+* https://github.com/Tim-B/grunt-aws-lambda#aws-credentials
+* http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials.html
 7. Add configuration to the grunt lambda_deploy task:
 	* 
