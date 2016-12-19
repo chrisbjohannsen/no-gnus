@@ -11,8 +11,10 @@ exports.handler = (event, context) => {
 
     let response = {
         statusCode: responseCode,
-        headers: {},
-        body: JSON.stringify(responseBody)
+        headers: {
+        	"Content-Type" : "text/plain"
+        },
+        body: responseBody.message
     };
     
     console.log("response : " + JSON.stringify(response));
