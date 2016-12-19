@@ -27,7 +27,6 @@ to trigger an http api call on a remote service. I have been looking for a reaso
 	* grunt-aws-lambda
 	* grunt-pack
 3. Add index.js and code:
-	* 	
     use strict;
 
     console.log('Loading function');
@@ -64,4 +63,4 @@ to trigger an http api call on a remote service. I have been looking for a reaso
 
     		}
     	}
-    	```
+    ```
