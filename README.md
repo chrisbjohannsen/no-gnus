@@ -2,7 +2,7 @@
 
 ### Motivation:
 
-A recent change in our companies IT policy is forcing a switch of our messaging platform to [slack](http://slack.com). 
+A recent change in our companies IT policy embraces@H a switch of our messaging platform to [slack](http://slack.com). 
 As I paged through the help files to get myself spun up on the tool I found that I could define my own custom "slash commands" 
 to trigger an http api call on a remote service. I have been looking for a reason to play around with Amazon AWS Lambda so I jumped into the AWS console, created a lambda function to echo back some text. After fiddling around to get the AWS Api Gateway to expose the lambda, I created the custom "slash command" and voila, an online, multi-service, api integration project was born!
 
@@ -42,7 +42,7 @@ exports.handler = (event, context) => {
     let response = {
         statusCode: responseCode,
         headers: {
-        	Content-Type: "text/plain"
+        	Content-Type: "text/plain"https://github.com/chrisbjohannsen/no-gnus
         	},
         body: JSON.stringify(responseBody)
     };
