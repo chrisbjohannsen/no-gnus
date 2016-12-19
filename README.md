@@ -55,13 +55,13 @@ exports.handler = (event, context) => {
 	* https://github.com/Tim-B/grunt-aws-lambda#aws-credentials
 	* http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials.html
 7. Add configuration to the grunt lambda_deploy task:
-	* ```javascript
+```javascript
 	default: {
-    		arn: "{your arn from step 5}",
-    		options: {
-    			region: "{your region}",
-    			memory: 128,
-    			enableVersioning: true
-    		}
-    	}
+		arn: "{your arn from step 5}",
+		options: {
+			region: "{your region}",
+			memory: 128,
+			enableVersioning: true
+		}
+    }
 ```
