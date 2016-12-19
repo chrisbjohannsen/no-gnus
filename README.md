@@ -27,27 +27,27 @@ to trigger an http api call on a remote service. I have been looking for a reaso
 	* grunt-aws-lambda
 	* grunt-pack
 3. Add index.js and code:
-	* ```javascript
-    use strict;
+```javascript
+use strict;
 
-    console.log('Loading function');
+console.log('Loading function');
 
-    exports.handler = (event, context) => {
-        let responseCode = 200;
-        let responseBody = {
-            message: "No Gnus is good gnus with Gary Gnu",
-            input: event
-        };
-
-        let response = {
-            statusCode: responseCode,
-            headers: {},
-            body: JSON.stringify(responseBody)
-        };
-        
-        console.log("response : " + JSON.stringify(response));
-        context.succeed(response);
+exports.handler = (event, context) => {
+    let responseCode = 200;
+    let responseBody = {
+        message: "No Gnus is good gnus with Gary Gnu",
+        input: event
     };
+
+    let response = {
+        statusCode: responseCode,
+        headers: {},
+        body: JSON.stringify(responseBody)
+    };
+    
+    console.log("response : " + JSON.stringify(response));
+    context.succeed(response);
+};
 ```
 4. Save and test using `grunt lambda_invoke`
 5. Login to the AWS Console and setup a Lambda function. Make note of the arn of the function you create as you will need to add it to your grunt lambda_deploy task.
